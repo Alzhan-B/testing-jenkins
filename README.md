@@ -1,55 +1,22 @@
-# JenkinsQA_JS_06
+# Testing Jenkins
 
+This project is about creating automation test scripts in Cypress and JavaScript for testing Jenkins website. 
 
-**How to start working in our project?**
+## How to start working in our project?
 
 1. Clone repository to your machine.
 
 2. Navigate to project root folder.
 
-3. Run command ```npm ci``` in terminal VScode.
+3. Run command `npm install` or `npm ci` to install dependencies.
 
-4. Copy and paste the file ```cypress.env.json.example``` to project root folder. Сhange the file name to ```cypress.env.json```. Put your own credentials for login in json file.
+4. Create env file with creaentials:
+    1) Copy and paste the file `cypress.env.json.example` to project root folder. 
+    2) Сhange the file name to `cypress.env.json`. 
 
-5. After, execute ```npx cypress open```  to run tests.
+5. Choose a script to execute your tests:
 
-**Project Coding Convention**
-
-Naming conventions:
-We shall use Camelcase for naming conventions: ```camelCase```
-
-Spec names:
-student should create the spec containing the name of the userstory (US): ```header.cy.js``` 
-
-
-**Spec structure:**
-
-- Each block ```describe``` should contain the name of spec file
-- Each test (```it```) should contain name of test case (```AT```) 
-
-example:
-describe('Header', () => {
-
-    it('Verify logo jenkins is visible on the header', function () {
-        ...
-    })
-
-    it('Verify logo jenkins is clickable and redirects to homePage', function () {
-        ...
-    })
-})
-
-**Attention!**
-
-Students are not allowed to install any libraries, plugins, etc. to avoid changing configuration files. 
-
-**!!Do not push changed files as:**
-
-```package.json```
-```package.lock.json```
-```cypress.config.js```
-```e2e.js```
-```ci.yml```
-```cancel.yml```
-```globalHooks.js```
-```cleanData.js```
+   * `npm run cy-open` - opens Cypress to manually choose which test to run
+   * `npm run cy-run` - runs all tests with UI (visible monitoring)
+   * `npm run cy-run-ci` - runs all the tests without UI
+   
